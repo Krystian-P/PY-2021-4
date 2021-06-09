@@ -1,10 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>warehouse</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-$END$
+    <p>
+        {% if errors %}
+        <h2>errors!</h2>
+        <ol>
+            {% for error in errors %}
+            <li class="error">{{error}}</li>
+            {% endfor %}
+        </ol>
+        {% endif %}
+
+        <h1>Warehouse</h1>
+        <ul>
+            {% for item in items %}
+            <li>{{item}}</li>
+            {% endfor %}
+        </ul>
+    </p>
 </body>
 </html>

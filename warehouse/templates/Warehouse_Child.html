@@ -1,0 +1,16 @@
+{% extends "Warehouse_Parent.html" %}
+{% block content %}
+<ul>
+    {% for item in items %}
+    <li>{{item}}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
+{% block new_content %}
+<form>
+    <label>Element name</label>
+    <input name="element"/>
+    <input type="submit"/>
+</form>
+{% endblock %}
