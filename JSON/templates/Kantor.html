@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kantor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <h1 class="title">Witaj w kantorze</h1>
+    <form method="POST">
+
+    <label for="waluta" class="text">Wybież walutę:</label>
+      <select name="currency" id="waluta">
+        {% for val in item %}
+        <option value="{{ val }}">{{ val }}</option>
+        {% endfor %}
+      </select>
+        <br>
+        <label for="ilość" class="text">Podaj ilość</label>
+        <input name="amount" type="number" id="ilość">
+      <br>
+      <input class="click" type="submit" value="Przelicz">
+    </form>
+    <h1 class="text">Do zapłaty:{{calculation}} zł</h1>
+
+</body>
+</html>
