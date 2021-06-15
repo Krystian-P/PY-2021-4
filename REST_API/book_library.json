@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Amerykańscy Bogowie",
+    "genre": "Fantazy",
+    "pages": 233,
+    "read": false
+  },
+  {
+    "id": 2,
+    "title": "MItologia Nordycka",
+    "description": "Mitologia",
+    "pages": 544,
+    "done": true
+  }
+]
